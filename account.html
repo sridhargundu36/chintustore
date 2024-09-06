@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single product||chintu store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chintu.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">
+                <div class="logo">
+                    <h1>CHINTU <span>STORE</span></h1>
+                </div>
+            </a>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">All products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-bars menu-icon" onclick="menutoogle()"></i></a>
+        </div>
+    </div>
+
+
+<!-- -------accountpage----------- -->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/shoppinggirl.png" width="100%">
+            </div>
+            <div class="col-2">
+              <div class="form-container">
+                <div class="form-btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="indicator">
+                </div>
+                <form id="loginform">
+                    <input type="text" placeholder="username">
+                    <input type="password" placeholder="password">
+                    <button type="submit" class="btn">Login</button>
+                    <a href="">Forgot password</a>
+                </form>
+
+                <form id="regform">
+                    <input type="text" placeholder="username">
+                    <input type="email" placeholder="email">
+                    <input type="password" placeholder="password">
+                    <button type="submit" class="btn">Register</button>
+                </form>
+
+
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------footer-------->
+<div class="footer">
+    <div class="small-container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>downdload our app</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="app-logo">
+                    <img src="images/app-1.png" class="playstore">
+                    <img src="images/app-2.png" class="appstore">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <h3>usefull links</h3>
+                <ul>
+                    <li>cupons</li>
+                    <li>blog post</li>
+                    <li>return policy</li>
+                    <li>privacy</li>
+                </ul>
+                
+            </div>
+            <div class="footer-col-3">
+                <h3>media links</h3>
+                <ul>
+                    <li>facebook</li>
+                    <li>twitter</li>
+                    <li>instagram</li>
+                    <li>youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><i class="fa fa-copyright" aria-hidden="true"></i> copyright-2024-2025</p>
+    </div>
+</div>
+</body>
+<script>
+    var menuItems = document.getElementById("menuItems");
+
+    menuItems.style.maxHeight = "0px";
+
+    function menutoogle(){
+        if( menuItems.style.maxHeight == "0px"){
+            menuItems.style.maxHeight = "200px";
+        }
+        else{
+            menuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+<script>
+    var loginform = document.getElementById("loginform");
+    var regform = document.getElementById("regform");
+    var indicator = document.getElementById("indicator");
+   
+    function register(){
+        loginform.style.transform = "translateX(0px)";
+        regform.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        loginform.style.transform = "translateX(300px)";
+        regform.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+
+</script>
+</html>
